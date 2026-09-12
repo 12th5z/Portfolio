@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nguyễn Quốc Khánh — Web &amp; Mobile Developer</title>
+<meta name="description" content="Portfolio của Nguyễn Quốc Khánh, sinh viên Công nghệ thông tin tại HUFLIT, chuyên Web và Mobile." />
+<link rel="icon" type="image/svg+xml" href="assets/logo.PNG" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<a class="skip-link" href="#main">Bỏ qua đến nội dung chính</a>
+
+<header class="nav" id="nav">
+  <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress-fill" id="scroll-progress-fill"></span></div>
+  <div class="nav-inner">
+    <a href="#home" class="logo" aria-label="Nguyễn Quốc Khánh">
+      <img src="assets/logo.PNG" alt="Nguyễn Quốc Khánh" />
+    </a>
+
+    <nav class="nav-links" aria-label="Điều hướng chính">
+      <span class="nav-indicator" id="nav-indicator" aria-hidden="true"></span>
+      <a href="#about" data-nav>Giới thiệu</a>
+      <a href="#skills" data-nav>Kỹ năng</a>
+      <a href="#education" data-nav>Học vấn</a>
+      <a href="#projects" data-nav>Dự án</a>
+      <a href="#contact" data-nav>Liên hệ</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Chuyển giao diện sáng / tối" aria-pressed="false">
+        <span class="icon-flip">
+          <svg class="icon icon-sun face-front" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="4.2"/>
+            <path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/>
+          </svg>
+          <svg class="icon icon-moon face-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/>
+          </svg>
+        </span>
+      </button>
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1 class="hero-name boot-in" style="animation-delay:.14s">Nguyễn Quốc Khánh</h1>
+        <p class="hero-role boot-in" style="animation-delay:.24s">Sinh viên Công nghệ thông tin — HUFLIT<br/>Web &amp; Mobile Developer</p>
+        <p class="hero-desc boot-in" style="animation-delay:.32s">Mình xây dựng những sản phẩm web và mobile với sự tập trung vào trải nghiệm, hiệu năng và tính thực tế. Từ giao diện trên trình duyệt đến ứng dụng trên thiết bị di động, mình luôn muốn biến những ý tưởng thành sản phẩm có thể sử dụng và tiếp tục hoàn thiện qua từng dự án.</p>
+        <div class="hero-actions boot-in" style="animation-delay:.4s">
+          <a href="#contact" class="btn btn-solid">Liên hệ với tôi</a>
+          <a href="#projects" class="btn btn-outline">Xem dự án</a>
+        </div>
+      </div>
+
+      <div class="hero-visual boot-in" style="animation-delay:.2s" aria-hidden="true">
+        <div class="terminal-float">
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="tdot tdot-r"></span><span class="tdot tdot-y"></span><span class="tdot tdot-g"></span>
+              <span class="terminal-title">profile.js</span>
+            </div>
+            <pre class="terminal-body"><code id="typewriter"></code><span class="cursor">&#9608;</span></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Cuộn xuống phần giới thiệu">
+      <span>cuộn xuống</span>
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-veil" aria-hidden="true"></div>
+    <div class="section-inner two-col">
+      <p class="mono-tag" data-reveal>// giới thiệu</p>
+      <div class="col-content">
+        <h2 class="section-title">Người viết code, học từ hai phía nền tảng</h2>
+        <p class="body-text" data-reveal>
+          Mình là Khánh, hiện đang theo học ngành Công nghệ thông tin tại Đại học Ngoại ngữ - Tin học TP.HCM (HUFLIT).
+          Mình dành thời gian tìm hiểu song song cả phát triển web lẫn phát triển ứng dụng di động, để hiểu được cách
+          một sản phẩm vận hành từ giao diện người dùng cho đến logic xử lý bên dưới.
+        </p>
+        <dl class="facts" data-reveal-group>
+          <div class="fact">
+            <dt>Họ và tên</dt>
+            <dd>Nguyễn Quốc Khánh</dd>
+          </div>
+          <div class="fact">
+            <dt>Ngày sinh</dt>
+            <dd>12/05/2005</dd>
+          </div>
+          <div class="fact">
+            <dt>Trường</dt>
+            <dd>Đại học Ngoại ngữ - Tin học TP.HCM (HUFLIT)</dd>
+          </div>
+          <div class="fact">
+            <dt>Chuyên ngành</dt>
+            <dd>Công nghệ thông tin</dd>
+          </div>
+          <div class="fact">
+            <dt>Hướng đi</dt>
+            <dd>Web Development &amp; Mobile Development</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="section-veil" aria-hidden="true"></div>
+    <div class="section-inner two-col">
+      <p class="mono-tag" data-reveal>// kỹ năng</p>
+      <div class="col-content">
+        <h2 class="section-title">Công cụ mình đang sử dụng</h2>
+        <div class="skill-grid" data-reveal-group>
+          <div class="skill-card">
+            <h3>Web</h3>
+            <ul class="tag-list">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Responsive UI</li><li>SQL Server</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Mobile</h3>
+            <ul class="tag-list">
+              <li>Java</li><li>Android SDK</li><li>Android Studio</li><li>UI/UX cơ bản</li><li>FireBase</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Công cụ &amp; khác</h3>
+            <ul class="tag-list">
+              <li>Git &amp; GitHub</li><li>VS Code</li><li>Android Studio</li><li>Làm việc nhóm</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <div class="section-veil" aria-hidden="true"></div>
+    <div class="section-inner two-col">
+      <p class="mono-tag" data-reveal>// học vấn</p>
+      <div class="col-content">
+        <h2 class="section-title">Quá trình học tập</h2>
+        <div class="edu-card" data-reveal>
+          <div class="edu-head">
+            <h3>Đại học Ngoại ngữ - Tin học TP.HCM (HUFLIT)</h3>
+            <span class="edu-period">Sinh viên đang theo học</span>
+          </div>
+          <p class="body-text">Chuyên ngành Công nghệ thông tin, tập trung vào phát triển phần mềm ở cả hai nền tảng web và di động.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section-veil" aria-hidden="true"></div>
+    <div class="section-inner two-col">
+      <p class="mono-tag" data-reveal>// dự án</p>
+      <div class="col-content">
+        <h2 class="section-title">Dự án đang thực hiện</h2>
+        <p class="body-text muted" data-reveal>Phần này còn trống — thêm dự án web hoặc mobile đầu tiên của bạn vào đây khi sẵn sàng.</p>
+        <div class="project-grid" data-reveal-group>
+          <article class="project-card project-empty">
+            <h3>Web mô phỏng bách hoá xanh</h3>
+            <p><a href="https://byvn.net/50mh" target="_blank" rel="noopener noreferrer">https://byvn.net/50mh</a></p>
+          </article>
+          <article class="project-card project-empty">
+            <h3>Ứng dụng CoffeX</h3>
+            <p><a href="https://byvn.net/FD7v" target="_blank" rel="noopener noreferrer">https://byvn.net/FD7v</a></p>
+          </article>
+          <article class="project-card project-empty">
+            <h3>Khác</h3>
+            <p>Sắp cập nhật</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-contact" id="contact">
+    <div class="section-veil" aria-hidden="true"></div>
+    <div class="section-inner two-col">
+      <p class="mono-tag" data-reveal>// liên hệ</p>
+      <div class="col-content">
+        <h2 class="section-title">Cùng kết nối</h2>
+        <p class="body-text" data-reveal>Bạn có thể liên hệ với mình qua các kênh dưới đây để trao đổi về công việc, dự án hoặc học tập.</p>
+        <ul class="contact-list" data-reveal-group>
+          <li>
+            <span class="contact-label">Email</span>
+            <a href="mailto:Ngynquockhanh@gmail.com">Ngynquockhanh@gmail.com</a>
+          </li>
+          <li>
+            <span class="contact-label">GitHub</span>
+            <a href="https://github.com/12th5z" target="_blank" rel="noopener noreferrer">github.com/12th5z</a>
+          </li>
+          <li>
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://linkedin.com/in/nguyễn-quốc-khánh-742023366" target="_blank" rel="noopener noreferrer">linkedin.com/in/nguyễn-quốc-khánh-742023366</a>
+          </li>
+        </ul>
+        <a href="mailto:Ngynquockhanh@gmail.com" class="btn btn-solid" data-reveal>Gửi email cho tôi</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 Nguyễn Quốc Khánh. Thiết kế và phát triển bằng HTML, CSS, JavaScript và Three.js.</p>
+</footer>
+
+<button id="back-to-top" class="back-to-top" type="button" aria-label="Lên đầu trang">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V4M6 10l6-6 6 6"/></svg>
+</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
